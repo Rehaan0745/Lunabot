@@ -1,0 +1,17 @@
+lunabot-rover/
+├── README.md                           # System overview, architecture diagram, setup guide
+├── LICENSE                             # Open-source license (MIT)
+├── .gitignore                          # Ignores build files, .env, and platformio artifacts
+├── firmware/
+│   └── esp32/
+│       ├── platformio.ini              # ESP32 dependencies (DHT, BMP280, ArduinoJson)
+│       └── src/
+│           └── main.cpp                # ESP32 C++ Sensor & Motor control code
+└── src/
+    ├── lunabot_bringup/
+    │   └── launch/
+    │       └── robot.launch.py        # ROS 2 Launch script (LiDAR, Camera, Telemetry)
+    └── lunabot_telemetry/
+        ├── package.xml                 # ROS 2 Dependencies declaration
+        └── lunabot_telemetry/
+            └── telemetry_node.py       # Python ROS 2 serial node
